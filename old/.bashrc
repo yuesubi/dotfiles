@@ -1,0 +1,1 @@
+/home/arch/dotfiles/.bashrc
