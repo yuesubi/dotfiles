@@ -1,8 +1,14 @@
 #!/bin/bash
 
+if [ $1 ]; then
+	home_dir=${1}
+else
+	home_dir=~
+fi
+
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
+dir=$home_dir/dotfiles                    # dotfiles directory
 olddir=${dir}/old             # old dotfiles backup directory
 
 # list of files/folders to symlink in homedir
@@ -31,7 +37,7 @@ for file in $files; do
         mkdir -p $parentdir
 
         echo "Adding $file to $dir"
-        mv ~/$file $dir/$file
+        mv $home_dir/$file $dir/$file
     fi
 
     parentdir=$(dirname ~/$file)
@@ -44,9 +50,9 @@ for file in $files; do
 
     if [ ! -e ~/$file ]; then
         echo "Moving any existing dotfiles from ~ to $olddir"
-        mv ~/$file $olddir/$file
+        mv $home_dir/$file $olddir/$file
     fi
     
     echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/$file
+    ln -s $dir/$file $home_dir/$file
 done
