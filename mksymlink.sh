@@ -4,7 +4,12 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=${dir}/old             # old dotfiles backup directory
-files=".bashrc .xinitrc .config/picom .config/qtile .config/alacritty .config/fish"    # list of files/folders to symlink in homedir
+
+# list of files/folders to symlink in homedir
+files=".bashrc .xinitrc .config/picom .config/qtile"
+files="$files .config/alacritty .config/fish .config/xinits"
+files="$files .config/htop .config/gtk-2.0 .config/gtk-3.0"
+files="$files .config/dmscripts .config/awesome startwm.sh"
 
 ##########
 
