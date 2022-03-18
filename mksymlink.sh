@@ -37,7 +37,7 @@ for file in $files; do
         mkdir -p $parentdir
 
         echo "Adding $file to $dir"
-        mv $home_dir/$file $dir/$file
+        mv -R $home_dir/$file $dir/$file
     fi
 
     parentdir=$(dirname ~/$file)
@@ -48,7 +48,7 @@ for file in $files; do
     echo "Making directory $parentdir"
     mkdir -p $parentdir
 
-    if [ ! -e ~/$file ]; then
+    if [ -f ~/$file ]; then
         echo "Moving any existing dotfiles from ~ to $olddir"
         mv $home_dir/$file $olddir/$file
     fi
