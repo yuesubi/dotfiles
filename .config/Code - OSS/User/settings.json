@@ -1,0 +1,46 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "'Ubuntu Mono', 'Ubuntu Mono', Ubuntu Mono, 'Ubuntu Mono'",
+    "editor.fontSize": 16,
+    "workbench.colorTheme": "Dracula",
+
+    "[c]": {
+        "editor.insertSpaces": false,
+        "editor.tabSize": 8,
+        "editor.minimap.maxColumn": 80,
+        "editor.rulers": [80],
+    },
+    "[cpp]": {
+        "editor.insertSpaces": false,
+        "editor.tabSize": 8,
+        "editor.minimap.maxColumn": 80,
+        "editor.rulers": [80],
+    },
+
+    "[html]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.minimap.maxColumn": 80,
+        "editor.rulers": [120],
+    },
+    "[css]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.minimap.maxColumn": 80,
+        "editor.rulers": [120],
+    },
+    "[javascript]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.minimap.maxColumn": 80,
+        "editor.rulers": [120],
+    },
+    "[javascriptreact]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.minimap.maxColumn": 80,
+        "editor.rulers": [120],
+    },
+
+    "editor.detectIndentation": false
+}
